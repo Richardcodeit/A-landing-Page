@@ -6,59 +6,7 @@
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
-body {
-  overflow-x: hidden;
-}
-.contain.active{
-  transition: transform 1s ease-in-out;
-}
-.icon-menu.active{
-  display: none;
-  transition: all 1s;
-}
-.nav{
-  position: absolute;
-  top: -150px;
-  right: 2px;
-  background-color: rgb(252, 234, 232);
-  border: 1px solid rgb(246, 193, 187);
-  height: 150px;
-  padding: 20px 40px;
-  margin:-15px;
-}
-.nav.active{
-  top: 20px;
-  transition: .5s ease-in-out;
-}
-#hid.active{
-  transition: 5s ease-in-out;
-}
-.rotate.active{
-  transform: rotate(180deg);
-}
-@media screen and (min-width:700px) {
- 
-  .icon-menu{
-      display: none;
-  }
-  .nav{
-      top: 15px;
-      background: none;
-      border: none;
-  }
-  .nav > span{
-      display: none;
-  }
-  .nav ul{
-      flex-direction: row;
-      gap: 50px;
-      font-size: 18px;
-  }
-  .nav ul li:hover{
-      color: #E74C3C;
-      text-decoration: underline;
-  }
-}
+
 *,
 ::before,
 ::after {
@@ -682,6 +630,10 @@ video {
   position: relative;
 }
 
+.isolate {
+  isolation: isolate;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -770,6 +722,10 @@ video {
   margin-top: 50px;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .flex {
   display: flex;
 }
@@ -784,6 +740,10 @@ video {
 
 .h-16 {
   height: 4rem;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .h-5 {
@@ -1198,6 +1158,14 @@ video {
     margin-top: -50px;
   }
 
+  .xlarger\:mb-negg-mag2 {
+    margin-bottom: -200px;
+  }
+
+  .xlarger\:mt-negg-mag2 {
+    margin-top: -200px;
+  }
+
   .xlarger\:block {
     display: block;
   }
@@ -1212,6 +1180,14 @@ video {
 
   .xlarger\:hidden {
     display: none;
+  }
+
+  .xlarger\:h-5 {
+    height: 1.25rem;
+  }
+
+  .xlarger\:h-10 {
+    height: 2.5rem;
   }
 
   .xlarger\:max-w-xs {
